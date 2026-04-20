@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innotec — IT Solutions</title>
+    <link rel="stylesheet" href="./output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              soft: "0 20px 60px rgba(0,0,0,.35)",
+            },
+          },
+        },
+      };
+    </script> -->
+    <style>
+      /* subtle noise-ish glow */
+      .glow {
+        background: radial-gradient(60% 60% at 70% 30%, rgba(168, 85, 247, .35), transparent 60%),
+                    radial-gradient(50% 50% at 20% 10%, rgba(59, 130, 246, .25), transparent 55%),
+                    radial-gradient(40% 40% at 40% 80%, rgba(236, 72, 153, .18), transparent 60%);
+      }
+      .glass {
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.10);
+        backdrop-filter: blur(10px);
+      }
+    </style>
+  </head>
+
+  <body class="bg-neutral-950 text-white selection:bg-fuchsia-500/40">
+    <!-- Background -->
+    <div class="fixed inset-0 -z-10 glow"></div>
+
+    <!-- Top Nav -->
+    <header class="sticky top-0 z-50 border-b border-white/5 bg-neutral-950/70 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-2">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-500 to-violet-600 shadow-soft">
+              <span class="text-sm font-black">IO</span>
+            </span>
+            <span class="text-lg font-semibold tracking-wide">Innotec</span>
+          </a>
+
+          <nav class="hidden items-center gap-7 text-sm text-white/70 md:flex">
+            <a class="hover:text-white" href="#about">About</a>
+            <a class="hover:text-white" href="#services">Services</a>
+            <a class="hover:text-white" href="#work">Work</a>
+            <a class="hover:text-white" href="#testimonials">Testimonials</a>
+            <a class="hover:text-white" href="#faq">FAQ</a>
+            <a class="hover:text-white" href="#contact">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <button class="hidden rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80 hover:bg-white/10 md:inline-flex">
+              Sign in
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-semibold shadow-soft hover:opacity-95"
+            >
+              Try it Free
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="mx-auto max-w-6xl px-4 pt-14">
+      <div class="grid items-center gap-10 md:grid-cols-2">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+            <span class="h-1.5 w-1.5 rounded-full bg-fuchsia-500"></span>
+            Your partner for modern IT
+          </p>
+
+          <h1 class="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
+            YOUR <span class="text-fuchsia-400">PARTNER</span> FOR<br />
+            COMPREHENSIVE <span class="text-violet-400">IT</span> SOLUTIONS
+          </h1>
+
+          <p class="mt-4 max-w-xl text-sm leading-6 text-white/65 md:text-base">
+            We empower teams with secure cloud, reliable infrastructure, and custom software. Build faster, scale smarter,
+            and keep your business protected.
+          </p>
+
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div class="glass flex w-full items-center gap-2 rounded-full px-3 py-2 sm:max-w-md">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/5">🔎</span>
+              <input
+                class="w-full bg-transparent text-sm text-white/90 placeholder:text-white/35 focus:outline-none"
+                placeholder="Search your needs (cloud, security...)"
+              />
+              <button class="rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-semibold">
+                Search
+              </button>
+            </div>
+
+            <button class="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold hover:bg-white/10">
+              <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/10">▶</span>
+              Watch Demo
+            </button>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-6 text-xs text-white/45">
+            <span class="font-semibold text-white/60">Trusted by</span>
+            <span class="tracking-widest">IBM</span>
+            <span class="tracking-widest">Microsoft</span>
+            <span class="tracking-widest">Cisco</span>
+            <span class="tracking-widest">Meta</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="relative">
+          <div class="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-fuchsia-500/20 via-violet-600/15 to-transparent blur-2xl"></div>
+
+          <div class="glass overflow-hidden rounded-[2.25rem] p-6 shadow-soft">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-xs text-white/60">IT Consultant</p>
+                <p class="text-lg font-semibold">On-demand expertise</p>
+              </div>
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">⏱</div>
+            </div>
+
+            <div class="mt-6 grid gap-4 md:grid-cols-2">
+              <div class="rounded-2xl bg-white/5 p-4">
+                <p class="text-xs text-white/60">Availability</p>
+                <p class="mt-1 text-2xl font-bold">24/7</p>
+                <p class="mt-2 text-xs text-white/50">Support & monitoring</p>
+              </div>
+              <div class="rounded-2xl bg-white/5 p-4">
+                <p class="text-xs text-white/60">Response</p>
+                <p class="mt-1 text-2xl font-bold">&lt; 15m</p>
+                <p class="mt-2 text-xs text-white/50">For critical alerts</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-gradient-to-r from-fuchsia-500/15 to-violet-600/15 p-4">
+              <p class="text-sm font-semibold">Our Team</p>
+              <div class="mt-3 flex items-center justify-between">
+                <div class="flex -space-x-2">
+                  <div class="h-9 w-9 rounded-full bg-white/10 ring-2 ring-neutral-950"></div>
+                  <div class="h-9 w-9 rounded-full bg-white/10 ring-2 ring-neutral-950"></div>
+                  <div class="h-9 w-9 rounded-full bg-white/10 ring-2 ring-neutral-950"></div>
+                  <div class="h-9 w-9 rounded-full bg-white/10 ring-2 ring-neutral-950"></div>
+                </div>
+                <button class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-white/80 hover:bg-white/10">
+                  Meet the team →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section id="about" class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="glass overflow-hidden rounded-[2rem] shadow-soft">
+          <div class="aspect-[16/9] bg-gradient-to-br from-white/10 to-white/0"></div>
+          <div class="p-6">
+            <p class="text-xs text-white/60">Our Advantages</p>
+            <h2 class="mt-2 text-2xl font-bold">Build with confidence</h2>
+            <p class="mt-3 text-sm text-white/60">
+              Security-first, performance-driven delivery with measurable outcomes.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          <div class="glass rounded-[2rem] p-6 shadow-soft">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10">👥</div>
+              <div>
+                <p class="font-semibold">Team of Experts</p>
+                <p class="mt-2 text-sm text-white/60">
+                  Specialists across cloud, security, data, and product engineering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass rounded-[2rem] p-6 shadow-soft">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10">🎯</div>
+              <div>
+                <p class="font-semibold">Personalization</p>
+                <p class="mt-2 text-sm text-white/60">
+                  Tailored roadmaps, stack choices, and delivery models for your goals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass rounded-[2rem] p-6 shadow-soft">
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10">🛡️</div>
+              <div>
+                <p class="font-semibold">Secure by default</p>
+                <p class="mt-2 text-sm text-white/60">
+                  Threat modeling, hardening, monitoring, and continuous compliance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We Offer -->
+    <section id="services" class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="glass rounded-[2.5rem] p-6 shadow-soft md:p-10">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+              We Offer
+            </p>
+            <h2 class="mt-3 text-3xl font-extrabold">Leading solutions in</h2>
+          </div>
+          <p class="max-w-xl text-sm text-white/60">
+            From strategy to shipping: we help you build products, migrate infrastructure, and maintain a strong security posture.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-4">
+          <!-- Left feature list -->
+          <div class="glass rounded-[2rem] p-6 md:col-span-1">
+            <p class="text-xs text-white/60">Custom Software Development</p>
+            <ul class="mt-4 space-y-3 text-sm text-white/70">
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-fuchsia-400"></span> UI/UX & Prototyping</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-violet-400"></span> Web & Mobile Apps</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-sky-400"></span> Integrations & APIs</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-emerald-400"></span> Maintenance & Support</li>
+            </ul>
+            <button class="mt-6 w-full rounded-full bg-white/5 px-4 py-2 text-sm font-semibold hover:bg-white/10">
+              Get Started →
+            </button>
+          </div>
+
+          <!-- Service cards -->
+          <div class="glass rounded-[2rem] p-6 md:col-span-1">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">☁️</div>
+            <h3 class="mt-4 font-semibold">Cloud Computing</h3>
+            <p class="mt-2 text-sm text-white/60">Migrations, cost optimization, reliability, and platform engineering.</p>
+            <button class="mt-6 rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-semibold">
+              See Service →
+            </button>
+          </div>
+
+          <div class="glass rounded-[2rem] p-6 md:col-span-1">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">🔐</div>
+            <h3 class="mt-4 font-semibold">Cyber Security</h3>
+            <p class="mt-2 text-sm text-white/60">Hardening, monitoring, incident response, and audits.</p>
+            <button class="mt-6 rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-semibold">
+              See Service →
+            </button>
+          </div>
+
+          <div class="glass rounded-[2rem] p-6 md:col-span-1">
+            <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">🤖</div>
+            <h3 class="mt-4 font-semibold">AI & Machine Learning</h3>
+            <p class="mt-2 text-sm text-white/60">Automation, analytics, assistants, and model deployment.</p>
+            <button class="mt-6 rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-semibold">
+              See Service →
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-8 flex justify-center">
+          <a href="#work" class="rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold hover:bg-white/10">
+            See all services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner Logos Strip -->
+    <section class="mx-auto max-w-6xl px-4 pt-14">
+      <div class="flex flex-col items-center justify-between gap-6 rounded-[2rem] border border-white/5 bg-white/[0.03] px-6 py-10 md:flex-row">
+        <div>
+          <p class="text-xs text-white/60">Get on another level with us</p>
+          <h3 class="mt-2 text-2xl font-bold">Trusted by teams worldwide</h3>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-8 text-white/40">
+          <span class="font-semibold tracking-widest">IBM</span>
+          <span class="font-semibold tracking-widest">Microsoft</span>
+          <span class="font-semibold tracking-widest">Meta</span>
+          <span class="font-semibold tracking-widest">Adobe</span>
+          <span class="font-semibold tracking-widest">Accenture</span>
+          <span class="font-semibold tracking-widest">Salesforce</span>
+          <span class="font-semibold tracking-widest">Cisco</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Work -->
+    <section id="work" class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="glass rounded-[2.5rem] p-6 shadow-soft md:p-10">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+              Our Work
+            </p>
+            <h2 class="mt-3 text-3xl font-extrabold">Explore work we’re proudly presenting</h2>
+          </div>
+          <p class="max-w-xl text-sm text-white/60">
+            A selection of recent deliveries across eCommerce, enterprise dashboards, and cloud modernization.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="rounded-[1.75rem] bg-gradient-to-br from-white/10 to-white/0 p-4">
+            <div class="aspect-[4/3] rounded-[1.5rem] bg-white/5"></div>
+            <p class="mt-3 text-sm font-semibold">Product Dashboard</p>
+            <p class="mt-1 text-xs text-white/55">Analytics + role-based access</p>
+          </div>
+
+          <div class="rounded-[1.75rem] bg-gradient-to-br from-white/10 to-white/0 p-4">
+            <div class="aspect-[4/3] rounded-[1.5rem] bg-white/5"></div>
+            <p class="mt-3 text-sm font-semibold">Cloud Migration</p>
+            <p class="mt-1 text-xs text-white/55">Resilience + cost reduction</p>
+          </div>
+
+          <div class="rounded-[1.75rem] bg-gradient-to-br from-white/10 to-white/0 p-4">
+            <div class="aspect-[4/3] rounded-[1.5rem] bg-white/5"></div>
+            <p class="mt-3 text-sm font-semibold">Commerce Platform</p>
+            <p class="mt-1 text-xs text-white/55">Checkout + inventory sync</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="glass rounded-[2.5rem] p-8 shadow-soft md:col-span-2">
+          <p class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+            Latest project
+          </p>
+          <h3 class="mt-3 text-3xl font-extrabold">Witness the outcome of dedication & innovation</h3>
+
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            <div class="rounded-[2rem] bg-gradient-to-br from-white/10 to-white/0 p-5">
+              <p class="text-sm font-semibold text-fuchsia-300">E-ShopX</p>
+              <p class="mt-2 text-sm text-white/60">
+                Rebuilt checkout & fulfillment flows with robust observability, improving conversion and stability under load.
+              </p>
+              <button class="mt-5 rounded-full bg-white/5 px-5 py-2 text-sm font-semibold hover:bg-white/10">
+                View case study →
+              </button>
+            </div>
+
+            <div class="rounded-[2rem] bg-white/5 p-5">
+              <p class="text-sm font-semibold">What we shipped</p>
+              <ul class="mt-3 space-y-2 text-sm text-white/65">
+                <li>• Modern UI + performance budget</li>
+                <li>• Inventory & payment integrations</li>
+                <li>• Cloud autoscaling + monitoring</li>
+                <li>• Security hardening & WAF rules</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-[2.5rem] p-8 shadow-soft">
+          <p class="text-sm font-semibold">Impact</p>
+          <div class="mt-6 space-y-5">
+            <div class="rounded-2xl bg-white/5 p-4">
+              <p class="text-3xl font-extrabold">+40%</p>
+              <p class="mt-1 text-xs text-white/55">Faster checkout completion</p>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4">
+              <p class="text-3xl font-extrabold">+30%</p>
+              <p class="mt-1 text-xs text-white/55">Improved conversion rate</p>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4">
+              <p class="text-3xl font-extrabold">+25%</p>
+              <p class="mt-1 text-xs text-white/55">Reduced infra costs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <p class="text-xs text-white/60">Here is what our clients have to say</p>
+          <h2 class="mt-2 text-3xl font-extrabold">Testimonials</h2>
+        </div>
+        <div class="hidden items-center gap-3 md:flex">
+          <button class="rounded-full border border-white/10 bg-white/5 p-3 hover:bg-white/10">←</button>
+          <button class="rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 p-3 hover:opacity-95">→</button>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+        <div class="glass rounded-[2rem] p-6 shadow-soft">
+          <p class="text-4xl text-fuchsia-300">“</p>
+          <p class="mt-3 text-sm text-white/65">
+            Innotec delivered ahead of schedule and helped us stabilize production with monitoring and incident playbooks.
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-white/10"></div>
+            <div>
+              <p class="text-sm font-semibold">Kashif R.</p>
+              <p class="text-xs text-white/50">CTO, Retail</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-[2rem] p-6 shadow-soft">
+          <p class="text-4xl text-violet-300">“</p>
+          <p class="mt-3 text-sm text-white/65">
+            Great communication, strong engineering practices, and the security review was extremely thorough.
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-white/10"></div>
+            <div>
+              <p class="text-sm font-semibold">Sarah L.</p>
+              <p class="text-xs text-white/50">Head of Ops</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-[2rem] p-6 shadow-soft">
+          <p class="text-4xl text-sky-300">“</p>
+          <p class="mt-3 text-sm text-white/65">
+            Our cloud bill went down while uptime improved. The migration plan was clear and low-risk.
+          </p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-white/10"></div>
+            <div>
+              <p class="text-sm font-semibold">Emily K.</p>
+              <p class="text-xs text-white/50">VP Engineering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Collaborate -->
+    <section class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="glass grid gap-6 rounded-[2.5rem] p-6 shadow-soft md:grid-cols-2 md:p-10">
+        <div>
+          <p class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+            Why collaborate
+          </p>
+          <h2 class="mt-3 text-3xl font-extrabold">Why collaborate with Innotec?</h2>
+          <p class="mt-3 text-sm text-white/60">
+            We combine senior engineering with clear delivery. Transparent timelines, measurable outcomes, and ongoing support.
+          </p>
+
+          <div class="mt-6 space-y-3">
+            <div class="rounded-2xl bg-white/5 p-4">
+              <p class="font-semibold">Innovative solutions</p>
+              <p class="mt-1 text-sm text-white/60">Modern architectures, rapid iteration, and resilient systems.</p>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4">
+              <p class="font-semibold">Skilled team</p>
+              <p class="mt-1 text-sm text-white/60">Cloud, security, data, frontend, backend — end-to-end.</p>
+            </div>
+            <div class="rounded-2xl bg-white/5 p-4">
+              <p class="font-semibold">Tailored approach</p>
+              <p class="mt-1 text-sm text-white/60">We adapt to your stack and your delivery process.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-fuchsia-500/25 to-violet-600/10 blur-2xl"></div>
+          <div class="h-full overflow-hidden rounded-[2.25rem] bg-gradient-to-br from-white/10 to-white/0 p-6">
+            <div class="aspect-[4/5] rounded-[2rem] bg-white/5"></div>
+            <div class="mt-5 flex items-center justify-between rounded-2xl bg-white/5 p-4">
+              <div>
+                <p class="text-sm font-semibold">Let’s build together</p>
+                <p class="text-xs text-white/55">Get a free consultation</p>
+              </div>
+              <a href="#contact" class="rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-4 py-2 text-sm font-semibold">
+                Contact →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-6xl px-4 pt-16">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold">Frequently Asked Question</h2>
+        <p class="mt-2 text-sm text-white/60">Answers to common questions about our services and process.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        <div class="space-y-3">
+          <!-- item -->
+          <button class="faq-btn glass w-full rounded-2xl px-5 py-4 text-left" data-target="a1">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold">What makes your service stand out?</span>
+              <span class="text-white/60">+</span>
+            </div>
+            <div id="a1" class="faq-panel mt-3 hidden text-sm text-white/60">
+              Senior engineers, clear milestones, and security-first delivery with measurable results.
+            </div>
+          </button>
+
+          <button class="faq-btn glass w-full rounded-2xl px-5 py-4 text-left" data-target="a2">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold">How does the onboarding process work?</span>
+              <span class="text-white/60">+</span>
+            </div>
+            <div id="a2" class="faq-panel mt-3 hidden text-sm text-white/60">
+              Discovery → proposal → kickoff → weekly delivery cadence with demos, reporting, and feedback loops.
+            </div>
+          </button>
+
+          <button class="faq-btn glass w-full rounded-2xl px-5 py-4 text-left" data-target="a3">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold">Do you provide ongoing support?</span>
+              <span class="text-white/60">+</span>
+            </div>
+            <div id="a3" class="faq-panel mt-3 hidden text-sm text-white/60">
+              Yes. We offer SLAs, monitoring, maintenance, and continuous improvements after launch.
+            </div>
+          </button>
+        </div>
+
+        <div class="space-y-3">
+          <button class="faq-btn glass w-full rounded-2xl px-5 py-4 text-left" data-target="b1">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold">What is the typical duration of a project?</span>
+              <span class="text-white/60">+</span>
+            </div>
+            <div id="b1" class="faq-panel mt-3 hidden text-sm text-white/60">
+              Small MVPs: 3–6 weeks. Mid-size builds: 2–4 months. Enterprise programs vary by scope.
+            </div>
+          </button>
+
+          <button class="faq-btn glass w-full rounded-2xl px-5 py-4 text-left" data-target="b2">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold">Can you work with our existing stack?</span>
+              <span class="text-white/60">+</span>
+            </div>
+            <div id="b2" class="faq-panel mt-3 hidden text-sm text-white/60">
+              Absolutely. We integrate with your tools (CI/CD, cloud, identity, observability) and follow your standards.
+            </div>
+          </button>
+
+          <button class="faq-btn glass w-full rounded-2xl px-5 py-4 text-left" data-target="b3">
+            <div class="flex items-center justify-between">
+              <span class="font-semibold">How do you handle security & compliance?</span>
+              <span class="text-white/60">+</span>
+            </div>
+            <div id="b3" class="faq-panel mt-3 hidden text-sm text-white/60">
+              We apply secure SDLC, perform reviews, set up monitoring, and help with audits (depending on requirements).
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="mx-auto max-w-6xl px-4 pb-14 pt-16">
+      <div class="glass rounded-[2.5rem] p-8 shadow-soft md:p-10">
+        <div class="grid gap-10 md:grid-cols-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-500 to-violet-600 shadow-soft">
+                <span class="text-sm font-black">IO</span>
+              </span>
+              <span class="text-lg font-semibold">Innotec</span>
+            </div>
+            <p class="mt-4 text-sm text-white/60">
+              Comprehensive IT solutions for modern teams. Build, secure, and scale with confidence.
+            </p>
+
+            <div class="mt-5 flex gap-3">
+              <a class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm hover:bg-white/10" href="#">Instagram</a>
+              <a class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm hover:bg-white/10" href="#">Facebook</a>
+              <a class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm hover:bg-white/10" href="#">LinkedIn</a>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold">Menu</p>
+            <ul class="mt-4 space-y-2 text-sm text-white/60">
+              <li><a class="hover:text-white" href="#about">About us</a></li>
+              <li><a class="hover:text-white" href="#services">Services</a></li>
+              <li><a class="hover:text-white" href="#work">Work</a></li>
+              <li><a class="hover:text-white" href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="text-sm font-semibold">Get in touch</p>
+            <form class="mt-4 space-y-3">
+              <input
+                class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm placeholder:text-white/35 focus:outline-none focus:ring-2 focus:ring-fuchsia-500/40"
+                placeholder="Your email"
+                type="email"
+              />
+              <textarea
+                class="h-28 w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm placeholder:text-white/35 focus:outline-none focus:ring-2 focus:ring-violet-500/40"
+                placeholder="Tell us about your project..."
+              ></textarea>
+              <button
+                type="button"
+                class="w-full rounded-full bg-gradient-to-r from-fuchsia-500 to-violet-600 px-6 py-3 text-sm font-semibold shadow-soft hover:opacity-95"
+              >
+                Send message
+              </button>
+              <p class="text-xs text-white/45">We’ll reply within 1 business day.</p>
+            </form>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/45">
+          © <span id="year"></span> Innotec. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // FAQ accordion
+      document.querySelectorAll(".faq-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-target");
+          const panel = document.getElementById(id);
+
+          // close others (optional, matches typical UI)
+          document.querySelectorAll(".faq-panel").forEach((p) => {
+            if (p !== panel) p.classList.add("hidden");
+          });
+
+          panel.classList.toggle("hidden");
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
